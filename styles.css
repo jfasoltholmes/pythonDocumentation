@@ -13,7 +13,7 @@ body {
 #main-doc {
     box-sizing: border-box;
     padding: 50px;
-    width: 80%; /* Adjust as needed */
+    width: 80%;
     margin-left: 0; /* Same as the width of the navbar */
     flex-grow: 1;
     overflow: auto; /* Enable scrolling if the content is too tall */
@@ -21,9 +21,8 @@ body {
   
 #navbar {
     box-sizing: border-box;
-    width: 20%; /* Adjust as needed */
+    width: 20%;
     height: 100vh; /* Full height */
-    
     overflow: hidden; /* Enable scrolling if the content is too tall */
     background-color: #FAF9F6;
     border-right: solid;
@@ -31,6 +30,10 @@ body {
     min-width: 320px;
     position: sticky;
     top: 0;
+}
+
+#navbar li:hover {
+    background-color: gray;
 }
 
 #navbar li:last-child {
@@ -48,9 +51,14 @@ body {
 }
 
 #navbar li {
-    padding: 21px;
     border-bottom: 3px solid #ddd;
     font-size: 1.83em;
+}
+
+#navbar li a {
+    display: block;
+    text-decoration: none;
+    padding: 21px;
 }
 
 #navbar a {
