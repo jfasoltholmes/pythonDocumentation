@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Python Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>
+        Python Documentation
+      </header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Syntax">Syntax</a></li>
+        <li><a class="nav-link" href="#Comments">Comments</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li><a class="nav-link" href="#Conditionals">Conditionals</a></li>
+        <li><a class="nav-link" href="#Booleans">Booleans</a></li>
+        <li><a class="nav-link" href="#For_Loops">For Loops</a></li>
+        <li><a class="nav-link" href="#References">References</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>
+          Introduction
+        </header>
+        <p>
+          Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java. The language provides constructs intended to enable writing clear programs on both a small and large scale.
+        </p>
+        <p>
+          It is used for: 
+          <ul>
+            <li>web development (server-side)</li>
+            <li>software development</li>
+            <li>mathematics</li>
+            <li>system scripting.</li>
+          </ul>
+          Why Python?
+          <ul>
+            <li>Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc).</li>
+            <li>Python has a simple syntax similar to the English language.</li>
+            <li>Python has syntax that allows developers to write programs with fewer lines than some other programming languages.</li>
+            <li>Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.</li>
+            <li>Python can be treated in a procedural way, an object-orientated way or a functional way.</li>
+          </ul>
+        </p>
+      </section>
+      <section id="Syntax" class="main-section">
+        <header>
+          Syntax
+        </header>
+        <p>
+          Python was designed to for readability, and has some similarities to the English language with influence from mathematics.
+          Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.
+          Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.
+          The number of spaces is up to you as a programmer, but it has to be at least one.
+          <pre>
+            <code id="code-example" class="python">
+              if 5 > 2:
+                print("Five is greater than two!")
+              if 5 > 2:
+                    print("Five is greater than two!")
+            </code>
+          </pre>
+          You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:
+          <pre>
+            <code id="code-example-incorrect" class="python">
+              if 5 > 2:
+                print("Five is greater than two!")
+                      print("Five is greater than two!")
+            </code>
+          </pre>
+        </p>
+      </section>
+      <section id="Comments" class="main-section">
+        <header>
+          Comments
+        </header>
+        <p>
+          Python has commenting capability for the purpose of in-code documentation.
+          Comments start with a #, and Python will render the rest of the line as a comment:
+          <pre>
+            <code id="code-example" class="python">
+              # This is a comment
+              print("Hello, World!")
+            </code>
+          </pre>
+          Comments can be placed at the end of a line, and Python will ignore the rest of the line:
+          <pre>
+            <code id="code-example" class="python">
+              print("Hello, World!") # This is a comment
+            </code>
+          </pre>
+          Python doesn't really have a syntax for multi-line comments, but you can use a multiline string instead of multiple #'s:
+          <pre>
+            <code id="code-example" class="python">
+              """
+              This is a comment
+              written in
+              more than just one line
+              """
+              print("Hello, World!")
+            </code>
+          </pre>
+        </p>
+      </section>
+      <section id="Variables" class="main-section">
+        <header>
+          Variables
+        </header>
+        <p>
+          Variables are used to store information to be referenced and manipulated in a computer program. They also provide a way of labeling data with a descriptive name, so our programs can be understood more clearly by the reader and ourselves.
+          Python has no command for declaring a variable. A variable is created the moment you first assign a value to it.
+        </p>
+        <p>
+          For example, the following code creates two variables, x and y, and assigns values to them:
+          <pre>
+            <code id="code-example" class="python">
+              x = 5
+              y = "Hello, World!"
+              print(x)
+              print(y)
+            </code>
+          </pre>
+          Variables do not need to be declared with any particular type, and can even change type after they have been set.
+        </p>
+      </section>
+      <section id="Conditionals" class="main-section">
+        <header>
+          Conditionals
+        </header>
+        <p>
+          Python supports the usual logical conditions from mathematics:
+          <ul>
+            <li>Equals: a == b</li>
+            <li>Not Equals: a != b</li>
+            <li>Less than: a < b</li>
+            <li>Less than or equal to: a <= b</li>
+            <li>Greater than: a > b</li>
+            <li>Greater than or equal to: a >= b</li>
+          </ul>
+          These conditions can be used in a variety of ways but, they are most commonly used in "if statements" and loops.
+        </p>
+        <p>
+          For example, an if statement could be used to only print a message if the condition is True:
+          <pre>
+            <code id="code-example" class="python">
+              a = 33
+              b = 200
+              if b > a:
+                print("b is greater than a")
+            </code>
+          </pre>
+        </p>
+      </section>
+      <section id="Booleans" class="main-section">
+        <header>
+          Booleans
+        </header>
+        <p>
+          In programming you often need to know if an expression is <code id="intext-code-example">True</code> or <code id="intext-code-example">False</code>.
+          You can evaluate any expression in Python, and get one of two answers, <code id="intext-code-example">True</code> or <code id="intext-code-example">False</code>.
+          When you compare two values, the expression is evaluated and Python returns the Boolean answer.
+          The <code id="intext-code-example">bool()</code> function allows you to evaluate any value, and give you True or False in return.
+        </p>
+        <p>
+          Almost any value is evaluated to <code id="intext-code-example">True</code> if it has some sort of content.
+          Any string is <code id="intext-code-example">True</code>, except empty strings. Any number is <code id="intext-code-example">True</code> Any number is <code id="intext-code-example">True</code>, except 0. 
+          Any list, tuple, set, and dictionary are <code id="intext-code-example">True</code>, except empty ones.
+        </p>
+      </section>
+      <section id="For_Loops" class="main-section">
+        <header>
+          For Loops
+        </header>
+        <p>
+          A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+          This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.
+          With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+        </p>
+        <p>
+          For example, the following code prints all the items in the list named fruits:
+          <pre>
+            <code id="code-example" class="python">
+              fruits = ["apple", "banana", "cherry"]
+              for x in fruits:
+                print(x)
+            </code>
+          </pre>
+          Even strings are iterable objects considering they are similar to an array of chars:
+          <pre>
+            <code id="code-example" class="python">
+              for x in "banana":
+                print(x)
+            </code>
+          </pre>
+          The <code id="intext-code-example">break</code> statement can stop the loop before it has looped through all the items, this is important for all types of loops:
+          <pre>
+            <code id="code-example" class="python">
+              fruits = ["apple", "banana", "cherry"]
+              for x in fruits:
+                print(x)
+                if x == "banana":
+                  break
+            </code>
+          </pre>
+        </p>
+      </section>
+      <section id="References" class="main-section">
+        <header>
+          References
+        </header>
+        <p>
+          All the information in this documentation was taken from <a href="https://www.w3schools.com/python/python_intro.asp">W3 Schools</a> and the <a href="https://docs.python.org/3/tutorial/index.html">Python Documentation</a>.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

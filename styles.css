@@ -1,0 +1,112 @@
+header {
+    font-size: 2em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+
+#main-doc {
+    box-sizing: border-box;
+    padding: 50px;
+    width: 80%; /* Adjust as needed */
+    margin-left: 0; /* Same as the width of the navbar */
+    flex-grow: 1;
+    overflow: auto; /* Enable scrolling if the content is too tall */
+}
+  
+#navbar {
+    box-sizing: border-box;
+    width: 20%; /* Adjust as needed */
+    height: 100vh; /* Full height */
+    
+    overflow: hidden; /* Enable scrolling if the content is too tall */
+    background-color: #FAF9F6;
+    border-right: solid;
+    border-bottom: solid;
+    min-width: 320px;
+    position: sticky;
+    top: 0;
+}
+
+#navbar li:last-child {
+    border-bottom: none;
+}
+
+#navbar header {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid #ddd;
+}
+
+#navbar ul{
+    padding: 0;
+}
+
+#navbar li {
+    padding: 21px;
+    border-bottom: 3px solid #ddd;
+    font-size: 1.83em;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 765px) {
+    body {
+        flex-direction: column;
+    }
+
+    #main-doc {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #navbar {
+        width: 100%;
+        height: 300%;
+        overflow-y: auto;
+        position: static;
+        overflow: visible;
+        border-right: none;
+        min-width: 0;
+    }
+
+}
+
+#code-example {
+    background-color: #f4f4f4;
+    border-left: 5px solid green;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+
+#code-example-incorrect {
+    background-color: #f4f4f4;
+    border-left: 5px solid red;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+
+#intext-code-example {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 1px;
+    white-space: pre-wrap;
+}
+
